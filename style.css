@@ -126,20 +126,29 @@ p {
 }
 
 .profile {
+    display: flex;
+    justify-content: center;
     position: relative;
     grid-area: profile;
     height: 100%;
     width: 100%;
+    /*background: #0000ff;*/
 }
 
 .about {
     position: absolute;
-    top: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #ffffff;
-    height: calc(100% - 45px);
+    height: 100%;
+    width: 100%; /* Ensure it takes up the full width */
+    background: #ff0000;
+    top: 45px;
+    left: 0;
+    z-index: 1; /* Make sure it's not behind other elements */
+}
+
+.profilePicture {
+    position: absolute;
+    top: 0;
+    z-index: 2;
 }
 
 /* -------------------------------------------------CARD STYLING----------------------------------------------- */
