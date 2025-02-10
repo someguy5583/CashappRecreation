@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/00498bf7fe.js" crossorigin="anonymous"></script>
+    <title>Home Page UI</title>
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <div class="home">
+                <div class="balance card">
+                    <div class="info">
+                        <p class="subheading">Cash Balance</p>
+                        <div class="redirect">
+                            <p class="text">Account & Routing</p>
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <p class="important" id="cashBalance">$0.00</p>
+                    <div class="actions">
+                        <button class="actionButton addCash" onclick="addCash()">Add Cash</button>
+                        <button class="actionButton removeCash" onclick="withdraw()">Withdraw</button>
+                    </div>
+                </div>
+                <div class="savings card">
+                    <div class="info">
+                        <p class="subheading">Savings</p>
+                        <div class="redirect">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <img src="savingsImage.webp" class="savingsImage" alt="">
+                    <p class="savingsCash">$16.49</p>
+                    <p class="Xsmall">Save for a goal</p>
+                </div>
+                <div class="bitcoin card">
+                    <div class="info">
+                        <p class="subheading">Buy bitcoin</p>
+                        <div class="redirect">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <img src="bitcoinImage.png" alt="">
+                </div>
+                <div class="stocks card">
+                    <div class="info">
+                        <p class="subheading" style="font-size: 14px;">Invest in stocks</p>
+                        <div class="redirect">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <img src="stocksImage.webp" style="width: 140px;">
+                </div>
+                <div class="tax card">
+                    <div class="info">
+                        <p class="subheading">Free tax filing</p>
+                        <div class="redirect">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <img src="taxImage.webp" alt="">
+                </div>
+            </div>
+            <div class="bottomNav">
+                <div class="icons">
+                    <a href="index.html" class="linkToHome">
+                        <i class="fa-solid fa-home active"></i>
+                    </a>
+                    <a href="rewards.html" class="linkToRewards">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </a>
+                    <a href="search.html" class="linkToSearch">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <div class="pfp">
+                        <a href="profile.html" class="linkToProfile">
+                            <img class="pfp" src="profile.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div id="depositPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p class="heading">Deposit</p>
+                <p class="text">Enter the amount you want to deposit:</p>
+                <input type="number" id="amount" placeholder="Enter deposit amount" min="0" step="0.01">
+                <button class="deposit-btn" onclick="submitDeposit()">Deposit</button>
+            </div>
+        </div>
+        
+        <div id="withdrawPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p class="heading">Withdraw</p>
+                <p class="text">Enter the amount you want to withdraw:</p>
+                <input type="number" id="withdrawAmount" placeholder="Enter withdraw amount" min="0" step="0.01">
+                <button class="deposit-btn" onclick="submitWithdraw()">Withdraw</button>
+            </div>
+        </div>  
+    </div>  
+</body>
+</html>
