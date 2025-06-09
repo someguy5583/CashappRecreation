@@ -5,6 +5,7 @@ body {
     padding: 0;
     margin: 0;
     background: #121212;
+    box-sizing: border-box;
 }
 
 * {
@@ -34,8 +35,8 @@ p {
 }
 
 .heading {
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .savingsCash {
@@ -194,6 +195,13 @@ p {
     margin-top: 45px;
 }
 
+.profilePage p {
+    grid-area: profile;
+    float: left;
+    z-index: 100000;
+    margin-top: -40px;
+}
+
 .profile {
     display: flex;
     justify-content: center;
@@ -206,13 +214,14 @@ p {
 
 .about {
     position: absolute;
-    height: 100%;
-    width: 100%; /* Ensure it takes up the full width */
-    background: #ffffff;
+    height: auto;
+    width: calc(100% - 30px); /* Ensure it takes up the full width */
+    background: #252525;
     border-radius: 15px;
     top: 0;
     left: 0;
     z-index: 1; /* Make sure it's not behind other elements */
+    padding: 15px;
 }
 
 .padding {
@@ -225,14 +234,28 @@ p {
     top: 0;
     margin-top: -45px;
     z-index: 2;
-    border: 5px solid #56c99f;
+    /*border: 3px solid #ffffff;*/
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.4)); /* Soft dark shadow */
+}
+
+.editProfile {
+    width: 100%;
+    border-radius: 10000px;
+    background: #333333;
+    border: none;
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: 200ms;
 }
 
 /* -------------------------------------------------CARD STYLING----------------------------------------------- */
 
 .card {
-    background: #2d2d2d;
+    background: #252525;
     border-radius: 15px;
     padding: 15px;
     height: 175px;
@@ -396,7 +419,7 @@ img {
 
 /* Popup container */
 .popup-content {
-    background: white;
+    background: #252525;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -435,7 +458,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Deposit button */
 .deposit-btn {
-    background: #000;
+    background: #56c99f;
     color: white;
     padding: 12px 15px;
     border: none;
@@ -447,7 +470,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .deposit-btn:hover {
-    background: #444;
+    background: #28b182;
 }
 
 .deposit-btn:active {

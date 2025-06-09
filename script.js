@@ -14,7 +14,8 @@ function updateDisplay() {
     cashBalanceElement.textContent = f.format(balance); // Pass number directly
 
     // Change color if balance is negative
-    cashBalanceElement.style.color = balance < 0 ? "#ff0000" : "black";
+    cashBalanceElement.style.color = balance < 0 ? "#e45858" : "#56c99f";
+
 }
 
 function addCash() {
@@ -69,3 +70,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+console.log(balance)
